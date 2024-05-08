@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=10000, initial-scale=1.0">
+    <title>who.is.miaaa</title>
+    <link rel="icon" type="image/png" href="smile.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Helvetica, sans-serif;
+            overflow-y: scroll;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .nav {
+            font-family: Helvetica, sans-serif;
+            background-color: #ffffff00;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-size: 25px;
+            position: fixed;
+            text-decoration: none;
+            top: 5%;
+            width: 180%;
+            z-index: 100;
+            font-weight: bold;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .header {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            padding: 20px;
+            text-align: center;
+            font-size: 150px;
+            position: fixed;
+            top: 100px;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 1000000px;
+            margin-top: 250px;
+        }
+
+        .image1, .image2, .image3, .image4, .image5, .image6, .image7, .image8, .image9, .image10, .image11, 
+        .image12, .image13, .image14, .image15, .image16, .image17, .image18, .image19, .image20, .image21, .image22 {
+            position: fixed;
+            bottom: -200%;
+            left: 70%;
+            transform: translateX(-50%);
+            opacity: 1;
+            z-index: 3;
+            transition: bottom 1s ease;
+        }
+        .image1 {
+            left: 50%;
+            transform: translateX(-10%);
+            max-width: 30%;
+            z-index: 3;
+        }
+
+
+        .image2 {
+            left: 50%;
+            transform: translateX(-60%);
+            max-width: 30%;
+            z-index: 4;
+        }
+
+        .image3 {
+            left: 50%;
+            transform: translateX(-60%);
+            max-width: 50%;
+            z-index: 4;
+
+        }
+
+        .image4 {
+            left: 50%;
+            transform: translateX(-60%);
+            max-width: 70%;
+            z-index: 4;
+        }
+
+        .image5 {
+            left: 50%;
+            transform: translateX(74%);
+            width: 27%;
+            z-index: 3;
+        }
+
+        .image6 {
+            left: 50%;
+            transform: translateX(40%);
+            width: 27%;
+            z-index: 6;
+        }
+
+        .image7 {
+            left: 50%;
+            transform: translateX(-70%);
+            width: 60%;
+            z-index: 7;
+        }
+
+        .image8 {
+            left: 50%;
+            transform: translateX(-10%);
+            width: 29%;
+            z-index: 7;
+        }
+
+        .image9 {
+            left: 50%;
+            transform: translateX(-173%);
+            width: 30%;
+            z-index: 8;
+        }
+
+        .image10 {
+            left: 50%;
+            transform: translateX(-60%);
+            width: 75%;
+            z-index: 9;
+        }
+
+        .image11 {
+            left: 50%;
+            transform: translateX(-50%);
+            width: 99%;
+            z-index: 9;
+        }
+
+        .image12 {
+            left: 50%;
+            transform: translateX(-100%);
+            width: 30%;
+            z-index: 10;
+        }
+
+        .image13 {
+            left: 50%;
+            transform: translateX(-150%);
+            width: 40%;
+            z-index: 11;
+        }
+
+        .image14 {
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            z-index: 9;
+        }
+
+        .image15 {
+            left: 50%;
+            transform: translateX(-50%);
+            width: 32%;
+            z-index: 13;
+        }
+
+        .image16 {
+            left: 50%;
+            transform: translateX(-30%);
+            width: 35%;
+            z-index: 14;
+        }
+
+        .image17 {
+            left: 50%;
+            transform: translateX(-140%);
+            width: 36%;
+            z-index: 15;
+        }
+
+        .image18 {
+            left: 50%;
+            transform: translateX(-60%);
+            width: 40%;
+            z-index: 16;
+        }
+
+        .image19 {
+            left: 50%;
+            transform: translateX(30%);
+            width: 31.5%;
+            z-index: 17;
+        }
+
+        .image20 {
+            left: 50%;
+            transform: translateX(-130%);
+            width: 28%;
+            z-index: 18;
+        }
+
+        .image21 {
+            left: 50%;
+            scale: 100%;
+            transform: translate(-50%, -33%);
+            z-index: 19;  
+        }
+
+        .image22 {
+            left: 50%;
+            scale: 80%;
+            transform: translate(7%, -20%);
+            z-index: 20;  
+        }
+
+
+        .scrolled {
+            bottom: 0;
+        }
+
+        .gif-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            scale: 180%;
+            transform: translate(-25%, -33%);
+            z-index: 2;  
+        }
+
+        .gif-container1 {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-39%, 8%);
+            z-index: 1;
+            display: none;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="index.html">Page 1</a></li>
+
+            <li><a href="page2.html">Page 2</a></li>
+
+            <li><a href="page3.html">Page 3</a></li>
+
+        </ul>
+
+    </div>
+    <header class="header">
+        <h1>who.is.miaaa</h1>
+    </header>
+    <div class="gif-container1">
+        <img src="scroll1.gif" alt="Loading...">
+    </div>
+    <div class="container">
+        <img class="image1" src="page 2/image (1).gif" alt="image1">
+        <img class="image2" src="page 2/image (2).png" alt="image2">
+        <img class="image3" src="page 2/image (3).png" alt="image3">
+        <img class="image4" src="page 2/image (4).png" alt="image4">
+        <img class="image5" src="page 2/image (5).jpg" alt="image5">
+        <img class="image6" src="page 2/image (6).jpg" alt="image6">
+        <img class="image7" src="page 2/image (7).png" alt="image7">
+        <img class="image8" src="page 2/image (8).png" alt="image8">
+        <img class="image9" src="page 2/image (9).png" alt="image9">
+        <img class="image10" src="page 2/image (10).png" alt="image10">
+        <img class="image11" src="page 2/image (11).gif" alt="image11">
+        <img class="image12" src="page 2/image (12).jpg" alt="image12">
+        <img class="image13" src="page 2/image (13).png" alt="image13">
+        <img class="image14" src="page 2/image (14).png" alt="image14">
+        <img class="image15" src="page 2/image (15).jpg" alt="image15">
+        <img class="image16" src="page 2/image (16).png" alt="image16">
+        <img class="image17" src="page 2/image (17).png" alt="image17">
+        <img class="image18" src="page 2/image (18).png" alt="image18">
+        <img class="image19" src="page 2/image (19).jpg" alt="image19">
+        <img class="image20" src="page 2/image (20).jpeg" alt="image20">
+        <img class="image21" src="page 2/image (21).gif" alt="image21">
+        <img class="image22" src="page 2/image (22).png" alt="image22">
+
+
+    </div>
+
+
+    <script>
+    <!-- JavaScript for image scrolling -->
+    window.addEventListener('scroll', function() {
+    const scrollPosition = window.scrollY;
+    console.log("Scroll Position:", scrollPosition);
+
+    // Trigger points for each image to appear
+    const triggerPoint1 = 500;  // Adjust this value for the appearance of image1
+    const triggerPoint2 = 1000; // Adjust this value for the appearance of image2
+    const triggerPoint3 = 1500; // Adjust this value for the appearance of image3
+    const triggerPoint4 = 2500; // Adjust this value for the appearance of image4
+    const triggerPoint5 = 3000; // Adjust this value for the appearance of image5
+    const triggerPoint6 = 4000; // Adjust this value for the appearance of image6
+    const triggerPoint7 = 4500; // Adjust this value for the appearance of image7
+    const triggerPoint8 = 5000; // Adjust this value for the appearance of image8
+    const triggerPoint9 = 5500; // Adjust this value for the appearance of image9
+    const triggerPoint10 = 6000; // Adjust this value for the appearance of image10
+    const triggerPoint11 = 6500; // Adjust this value for the appearance of image11
+    const triggerPoint12 = 7000; 
+    const triggerPoint13 = 7500; 
+    const triggerPoint14 = 8000; 
+    const triggerPoint15 = 8500; 
+    const triggerPoint16 = 9500; 
+    const triggerPoint17 = 10000; 
+    const triggerPoint18 = 11000; 
+    const triggerPoint19 = 12500; 
+    const triggerPoint20 = 13000; 
+    const triggerPoint21 = 13500; 
+    const triggerPoint22 = 14000; 
+
+
+
+
+
+    // Log trigger points for debugging
+    console.log("Trigger Points:", triggerPoint1, triggerPoint2, triggerPoint3, triggerPoint4, triggerPoint5, triggerPoint6, triggerPoint8, triggerPoint9, triggerPoint10, triggerPoint11, triggerPoint12,
+                                   triggerPoint13, triggerPoint14, triggerPoint15, triggerPoint16, triggerPoint17, triggerPoint18, triggerPoint19, triggerPoint20, triggerPoint21, triggerPoint22 );
+
+    // Apply the scrolled class based on scroll position for each image
+    const image1 = document.querySelector('.image1');
+    if (scrollPosition > triggerPoint1) {
+        console.log("Adding scrolled class to image1");
+        image1.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image1");
+        image1.classList.remove('scrolled');
+    }
+
+    const image2 = document.querySelector('.image2');
+    if (scrollPosition > triggerPoint2) {
+        console.log("Adding scrolled class to image2");
+        image2.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image2");
+        image2.classList.remove('scrolled');
+    }
+
+    const image3 = document.querySelector('.image3');
+    if (scrollPosition > triggerPoint3) {
+        console.log("Adding scrolled class to image3");
+        image3.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image3");
+        image3.classList.remove('scrolled');
+    }
+
+    const image4 = document.querySelector('.image4');
+    if (scrollPosition > triggerPoint4) {
+        console.log("Adding scrolled class to image4");
+        image4.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image4");
+        image4.classList.remove('scrolled');
+    }
+
+    const image5 = document.querySelector('.image5');
+    if (scrollPosition > triggerPoint5) {
+        console.log("Adding scrolled class to image5");
+        image5.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image5");
+        image5.classList.remove('scrolled');
+    }
+
+    const image6 = document.querySelector('.image6');
+    if (scrollPosition > triggerPoint6) {
+        console.log("Adding scrolled class to image6");
+        image6.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image6");
+        image6.classList.remove('scrolled');
+    }
+
+    const image7 = document.querySelector('.image7');
+    if (scrollPosition > triggerPoint7) {
+        console.log("Adding scrolled class to image7");
+        image7.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image7");
+        image7.classList.remove('scrolled');
+    }
+
+    const image8 = document.querySelector('.image8');
+    if (scrollPosition > triggerPoint8) {
+        console.log("Adding scrolled class to image8");
+        image8.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image8");
+        image8.classList.remove('scrolled');
+    }
+
+    const image9 = document.querySelector('.image9');
+    if (scrollPosition > triggerPoint9) {
+        console.log("Adding scrolled class to image9");
+        image9.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image9");
+        image9.classList.remove('scrolled');
+    }
+
+    const image10 = document.querySelector('.image10');
+    if (scrollPosition > triggerPoint10) {
+        console.log("Adding scrolled class to image10");
+        image10.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image10");
+        image10.classList.remove('scrolled');
+    }
+
+    
+    const image11 = document.querySelector('.image11');
+    if (scrollPosition > triggerPoint11) {
+        console.log("Adding scrolled class to image11");
+        image11.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image11");
+        image11.classList.remove('scrolled');
+    }
+
+    const image12 = document.querySelector('.image12');
+    if (scrollPosition > triggerPoint12) {
+        console.log("Adding scrolled class to image12");
+        image12.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image12");
+        image12.classList.remove('scrolled');
+    }
+
+    const image13 = document.querySelector('.image13');
+    if (scrollPosition > triggerPoint13) {
+        console.log("Adding scrolled class to image13");
+        image13.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image13");
+        image13.classList.remove('scrolled');
+    }
+
+    const image14 = document.querySelector('.image14');
+    if (scrollPosition > triggerPoint14) {
+        console.log("Adding scrolled class to image14");
+        image14.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image14");
+        image14.classList.remove('scrolled');
+    }
+
+    const image15 = document.querySelector('.image15');
+    if (scrollPosition > triggerPoint15) {
+        console.log("Adding scrolled class to image15");
+        image15.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image15");
+        image15.classList.remove('scrolled');
+    }
+
+    const image16 = document.querySelector('.image16');
+    if (scrollPosition > triggerPoint16) {
+        console.log("Adding scrolled class to image16");
+        image16.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image16");
+        image16.classList.remove('scrolled');
+    }
+
+    const image17 = document.querySelector('.image17');
+    if (scrollPosition > triggerPoint17) {
+        console.log("Adding scrolled class to image17");
+        image17.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image17");
+        image17.classList.remove('scrolled');
+    }
+
+    const image18 = document.querySelector('.image18');
+    if (scrollPosition > triggerPoint18) {
+        console.log("Adding scrolled class to image18");
+        image18.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image18");
+        image18.classList.remove('scrolled');
+    }
+
+    const image19 = document.querySelector('.image19');
+    if (scrollPosition > triggerPoint19) {
+        console.log("Adding scrolled class to image19");
+        image19.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image19");
+        image19.classList.remove('scrolled');
+    }
+
+    const image20 = document.querySelector('.image20');
+    if (scrollPosition > triggerPoint20) {
+        console.log("Adding scrolled class to image20");
+        image20.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image20");
+        image20.classList.remove('scrolled');
+    }
+
+    const image21 = document.querySelector('.image21');
+    if (scrollPosition > triggerPoint21) {
+        console.log("Adding scrolled class to image21");
+        image21.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image21");
+        image21.classList.remove('scrolled');
+    }
+
+    const image22 = document.querySelector('.image22');
+    if (scrollPosition > triggerPoint22) {
+        console.log("Adding scrolled class to image22");
+        image22.classList.add('scrolled');
+    } else {
+        console.log("Removing scrolled class from image22");
+        image22.classList.remove('scrolled');
+    }
+});
+
+    </script>
+
+     <!-- JavaScript for displaying the GIF -->
+     <script>
+        // Create a GIF element
+        const gif = document.createElement('img');
+        gif.src = 'gif.gif'; // Replace 'your-gif-url.gif' with the URL of your GIF
+        gif.alt = 'Loading...'; // Alt text for accessibility
+
+        // Add styles to the GIF container
+        const gifContainer = document.createElement('div');
+        gifContainer.classList.add('gif-container');
+        gifContainer.appendChild(gif);
+        document.body.appendChild(gifContainer);
+
+        // Hide the GIF after 5 seconds
+        setTimeout(function() {
+            gifContainer.style.display = 'none';
+        }, 2000); // Adjust the time in milliseconds as needed
+    </script>
+
+ <!-- JavaScript to hide the GIF once the page is scrolled -->
+ <script>
+    // Function to show the GIF after 3 seconds
+    setTimeout(function() {
+        const gifContainer = document.querySelector('.gif-container1');
+        gifContainer.style.display = 'block'; // Show the GIF container after 3 seconds
+    }, 2000);
+
+    // Function to hide the GIF once the page is scrolled
+    window.addEventListener('scroll', function() {
+        const gifContainer = document.querySelector('.gif-container1');
+        gifContainer.style.display = 'none'; // Hide the GIF container when the page is scrolled
+    });
+</script>
+</body>
+</html>
